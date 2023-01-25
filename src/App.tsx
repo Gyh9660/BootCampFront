@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import BoardContainer from "./api/comp/view/board/BoardContainer";
+import MenuContainer from "./api/comp/view/shared/MenuContainer";
+import MainContainer from "./api/comp/view/shared/MainContainer";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <MenuContainer/>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/" element={<MainContainer/>}/>
+                 <Route path="/boardContainer" element={<BoardContainer user={"abc"}/>}></Route>
+              </Routes>
+          </BrowserRouter>
     </div>
   );
 }
