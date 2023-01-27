@@ -17,10 +17,6 @@ const MenuContainer = observer(({
                 <Button>FAQ</Button>
                 <Button>Notice</Button>
             </div>
-            <div>
-                <input type={"text"}/>
-                <Button>Search</Button>
-            </div>
         </>
     )
 })

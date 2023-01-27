@@ -1,23 +1,17 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import BoardContainer from "./api/comp/view/board/BoardContainer";
 import MenuContainer from "./api/comp/view/shared/MenuContainer";
-import MainContainer from "./api/comp/view/shared/MainContainer";
+import Routers from "./api/comp/view/shared/Routers";
 
 
 function App() {
   return (
     <div className="App">
         <MenuContainer/>
-          <BrowserRouter>
-              <Routes>
-                  <Route path="/" element={<MainContainer/>}/>
-                 <Route path="/boardContainer" element={<BoardContainer user={"abc"}/>}></Route>
-              </Routes>
-          </BrowserRouter>
+        <Routers/>
     </div>
   );
 }
+//라우트 파일 분리해서 관리
 
 export default App;

@@ -29,11 +29,16 @@ const BoardContainer = observer(({
     return(
         <>
             <div>
+                <div>
+                    <input type={"text"}/>
+                    <Button>Search</Button>
+                </div>
                 <BoardView
                 boardList={boardList}
                 />
+
                 <div>
-                <Button>새글</Button>
+                    <Button href="http://localhost:3000/newFreeBoard">새글</Button>
                 </div>
             </div>
         </>
